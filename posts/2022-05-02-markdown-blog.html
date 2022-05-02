@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel='stylesheet' type='text/css' href="../lib/bootstrap.min.css">
+    <link rel='stylesheet' type='text/css' href="../style.css">
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
+    <title>Blog</title>
+</head>
+
+<body>
+    <div class="container my-5">
+        <div id="logo">
+            <a href="../index.html" id="logo-title">EDMOND</a>
+        </div>
+        <div class="row mb-5">
+            <div class="col-md-6 mx-auto">
+                <div class="mt-2" id="post"></div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="row justify-content-center">
+                <a href="https://www.linkedin.com/in/edmondchensj/" target="_blank" rel="noopener noreferrer">
+                    <img class="social-icon" src="../assets/images/general/linkedin-logo.png">
+                </a>
+            </div>
+            Copyright 2022
+        </div>
+    </div>
+</body>
+
+<script src="../lib/showdown.min.js"></script>
+
+<!-- UPDATE NAME OF THE POST JS FILE -->
+<script type="module">
+    import { post } from "./2022-05-02-markdown-blog.js";
+    document.getElementById("post").innerHTML = new showdown.Converter().makeHtml(post);
+</script>
